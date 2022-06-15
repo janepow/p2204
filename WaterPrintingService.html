@@ -1,0 +1,80 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>Richmond Hill Printing Service</title>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.23/esri/themes/light/main.css" />
+  <script src="https://js.arcgis.com/4.23/"></script>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+  </style>
+  <script>
+    require([
+      "esri/widgets/Print", "esri/widgets/LayerList",  
+      "esri/widgets/Sketch",
+      "esri/layers/GraphicsLayer",
+      "esri/views/MapView","esri/WebMap"
+    ], (Print, LayerList, Sketch, GraphicsLayer, MapView, WebMap) => {
+      const graphicsLayer = new GraphicsLayer();
+
+
+    const webmap = new WebMap({
+        portalItem: {
+        // autocasts as new PortalItem()
+        id: "340524752d3745cfafd0d783a49e5783"
+        },
+        layers: [graphicsLayer]
+    });
+
+    const view = new MapView({
+        container: "viewDiv",
+        map: webmap
+    });
+
+
+      view.when(() => {
+        const sketch = new Sketch({
+          layer: graphicsLayer,
+          view: view,
+          // graphic will be selected as soon as it is created
+          creationMode: "update"
+        });
+
+        view.ui.add(sketch, "bottom-left");
+      });
+
+      const print = new Print({
+            view: view,
+            // specify your own print service
+            printServiceUrl:
+              // "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task"         //static 
+              "https://p2204server.duckdns.org/arcgis/rest/services/Project2204/ExportWebMap_RichmondHill_V7/GPServer/Export%20Web%20Map"   //dynamic            
+          });
+
+          // Add widget to the top right corner of the view
+          view.ui.add(print, "top-right");
+
+          const layerList = new LayerList({
+            view: view
+          });
+
+          // Add widget to the top right corner of the view
+          view.ui.add(layerList, "bottom-right");
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+</html>
