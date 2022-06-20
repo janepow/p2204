@@ -153,6 +153,21 @@ a,
      transition: all .3s ease-in-out;
 }
 
+/* unvisited link */
+a:link {
+     color: #5c7234;
+   }
+   
+   /* visited link */
+   a:visited {
+     color: #8f7969;
+   }
+   
+   /* mouse over link */
+   a:hover {
+     color: #8f7969;
+   }
+
 img {
      max-width: 100%;
      height: auto;
