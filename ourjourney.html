@@ -113,7 +113,7 @@
                         </li>
                         <li class = "processes">
                            <h3><strong>Step 5: Static Map Exploration using ArcGIS API for Javascript (<a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Print.html">Print widget</a>)</strong></h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias libero, magni fugit, culpa debitis numquam exercitationem nihil tenetur molestiae sunt, qui temporibus non. Placeat, incidunt provident. At cumque corporis officiis.</p>                        
+                           <p> Using the uniform resource locator (URL) of the print service, that points to the AGOL environment, a static map was able to be printed with a variety of formats and page sizes.</p>                        
                            <img src="images/staticprintingtool.png"  alt="ArcGIS Printing Tool" />
                            <a href="https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/"><img src="images/restprintintools.png"  alt="REST URL Printing Tool" /></a>                           
                            <a href="https://developers.arcgis.com/javascript/latest/sample-code/widgets-print/"><img src="images/staticcode.png"  alt="Print Widget Sample Code" /></a>                           
@@ -121,40 +121,40 @@
                         <li class = "processes">
                            <h3><strong>Step 6: Adding additional features (<a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-LayerList.html"  alt="Layer List Widget API Reference"> Layer List Widget</a> and 
                            <a href="https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-Sketch.html" alt="Sketch Widget API Reference"> Sketch Widget </a> )</strong></h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias libero, magni fugit, culpa debitis numquam exercitationem nihil tenetur molestiae sunt, qui temporibus non. Placeat, incidunt provident. At cumque corporis officiis.</p>                           
+                           <p>The layer list functionality allowed a user to customize what layers are shown on the map in case there is too much or too little information with the initial setup.  While the sketch functionality gave the user the ability to draw points, lines, and polygons on a map with the intent of highlighting certain areas or features. </p>                           
                            <a href="https://developers.arcgis.com/javascript/latest/sample-code/widgets-layerlist/"><img src="images/layerlistcode.png"  alt="Layer List Widget Sample Code" /></a><br>
                            <a href="https://developers.arcgis.com/javascript/latest/sample-code/sketch-geometries/"><img src="images/sketchcode.png"  alt="Sketch Widget Sample Code" /></a>  
                         </li>
                         <li class = "processes">
                            <h3><strong>Step 7: Dynamic Map Exploration</strong></h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt repellendus officia dolor molestias laboriosam, quibusdam qui eum illo nemo, dicta expedita, rem accusamus? Neque minima dolores ullam repellat totam id!</p>                           
+                           <p>To achieve dynamic functionality, two tasks were published using ArcGIS Pro, and the python tools Export Web Map and Get Layout Templates Info, to a standalone ArcGIS server (p2204server) to allow the tasks to use the customized template and variables created for City of Richmond Hill.  </p>                           
                            <img src="images/dynamicresturl.png"  alt="REST URL Dynamic Printing Tool" /><br>
                            <img src="images/dynamiccode.png"  alt="API REST URL" /><br>                                                       
                         </li>
                         <li class = "processes">
                            <h3><strong>Step 8: AWS Configuration</strong></h3>
-                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facilis quasi odit? Architecto in, minus praesentium, atque ea fuga cumque blanditiis voluptatibus nihil numquam iste, harum odio ab quod illum.</p>
+                           <p> ArcGIS Server had to be introduced as a component to achieve the enhanced customization requested by the client. With that sever setup, the python tools could be published to the ArcGIS Server on Amazon Web Services (AWS) Elastic Compute Cloud 2 (EC2). </p>
                            <img src="images/aws.png" alt="AWS Configuration"/>
                         </li>
                         <li class = "processes">
                            <h3><strong>Step 9: Dynamic Map Template Creation</strong></h3>
-                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquid quam officiis mollitia eius odio cupiditate, asperiores suscipit quos modi repellendus tempora adipisci aspernatur ipsam sint vitae nesciunt nam dignissimos.</p>                          
+                           <p> The self serve mapping interface was changed from the AGOL environment API to the p2204server API and was successfully able to print a customized map with variable user inputs.</p>                          
                            <img src="images/dynamic_template.png"  alt="Dynamic Map Template" />
                         </li>
                         <li class = "processes">
-                           <h3><strong>Step 10: Publishing Dynamic Map Template and  Geoprocessing Service into the ArcGIS Server</strong></h3>
-                           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel ullam ipsum, dolorum eius quibusdam nisi numquam nam, quasi magnam, ratione et? Voluptas animi quo natus delectus illo ipsum aliquam iste.</p>
+                           <h3><strong>Step 10: Publishing Dynamic Map Template and Geoprocessing Service into the ArcGIS Server</strong></h3>
+                           <p> The geoprocessing print service is shareable across Esri platforms, including ArcGIS Web AppBuilder.</p>
                            <a href="https://enterprise.arcgis.com/en/server/latest/publish-services/windows/printing-in-web-applications.htm"><img src="images/dynamicprintingtools.png"  alt="Dynamic Printing Tools" /></a><br>                                                
                         </li>
                         <li class = "processes">
                            <h3><strong>Step 11: Hosting Interface in GitHub and QA/QC</strong></h3>
-                           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut aliquid quam officiis mollitia eius odio cupiditate, asperiores suscipit quos modi repellendus tempora adipisci aspernatur ipsam sint vitae nesciunt nam dignissimos.</p>
+                           <p>The HTML was hosted in GitHub for the purposes of the project but can be moved to another host as needed. </p>
                            <a href=""><img src="images/print_service_gui.png"  alt="Print Service Interface" /></a><br>
                            <a href=""><img src="images/pdf_sample.png"  alt="PDF Format Sample" /></a>
                         </li>
                         <li class = "processes">
                            <h3><strong>Step 11: Data Viewer Implementation using Experience Builder and ArcGIS Hub</strong></h3>
-                           <p>Throughout this process, there were a total of three web maps that were created to be put into the ArcGIS Hub. Each of these web maps were created using experience builder. Web app builder was avoided as it will be phasing out within the next couple of years, and all future functionalities will be transitioning into experience builder. It was recommended to the client that they grow that applications functionality rather than using an expiring platform. </p>
+                           <p>Throughout this process, there were a total of three web maps that were created to be put into both the HTML code and also the ArcGIS Hub. Each of these web maps were created using ArcGIS Pro and then shared on AGOL. By exploring funcionality of the printing tool geoprocessing service in a variety of both custom and pre-fabricated platforms, the client was able to see it's versatility. Web app builder was avoided as it will be phasing out within the next couple of years, and all future functionalities will be transitioning into experience builder. It was recommended to the client that they grow that applications functionality rather than using an expiring platform. </p>
                            <img src="" alt="#"/>
                         </li>
                         <li class = "processes">
